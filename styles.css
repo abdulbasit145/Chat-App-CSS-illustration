@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: cursive;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(270, 20%, 96%);
+    overflow: hidden;
+}
+
+#left-wrap {
+    width: 500px;
+    height: 600px;
+    background-color: hsl(264, 100%, 61%);
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    z-index: 1;
+}
+
+#right-wrap {
+    width: 500px;
+    height: 600px;
+    background-color: hsl(0, 3%, 85%);
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    z-index: 1;
+}
+
+#info {
+    font-size: 1.5em;
+    width: 400px;
+    position: absolute;
+    right: 20%;
+    top: 35%;
+    z-index: 2;
+}
+
+#info p {
+    margin-top: 15px;
+    color: hsl(270, 20%, 66%);
+}
+
+#phone {
+    width: 300px;
+    height: 555px;
+    background-color: hsl(0, 3%, 85%);
+    border-radius: 25px;
+    border: 8px solid white;
+    position: absolute;
+    top: 8%;
+    left: 320px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.mike {
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: -20px;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.avatar img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    margin-left: -60px;
+
+}
+
+.name {
+    margin-left: -40px;
+}
+
+.name p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.name p span {
+    font-weight: 300;
+    font-size: 0.6rem;
+    display: block;
+    color: rgb(182, 182, 182);
+}
+
+.special {
+    font-size: 2rem;
+    color: white;
+    margin-right: 15px;
+}
+
+.dots {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 2px;
+}
+
+.phone-body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 3%, 85%);
+}
+
+.msg-1 {
+    width: 170px;
+    background-color: rgb(186, 186, 186);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 12px;
+    border-bottom-left-radius: 5px;
+}
+
+.msg-2 {
+    width: 170px;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 12px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.img-msg,
+.msg-2 {
+    position: relative;
+    right: -95px
+}
+
+.img-msg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 4px;
+}
+
+.sp-msg {
+    width: 200px;
+    background: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    padding: 5px;
+    margin: 10px;
+    border-radius: 12px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sp-msg p {
+    font-size: 0.8rem;
+    color: white;
+    margin-right: 5px;
+}
+
+.sp-msg span {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(186, 186, 186);
+    border-radius: 25px;
+}
+
+.submit {
+    width: 95%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content:space-between;
+}
+.submit p{
+    color: rgb(126, 126, 126);
+    margin-left: 5px;
+}
+.submit div {
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.submit div span {
+    font-size:  1rem;
+    font-weight: bolder;
+    color: white;
+    margin: 0 auto;
+}
+
+/* Mobile View Media Query */
+@media(max-width:1284px){
+    #right-wrap{
+        display: none;
+    }
+    .wrapper {
+        overflow:scroll;
+    }
+    #left-wrap{
+        width: 350px;
+        height: 500px;
+    }
+    #phone{
+           left: 90px;
+    }
+    #info{
+        width: 300px;
+        top:90%;
+        left: 90px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
